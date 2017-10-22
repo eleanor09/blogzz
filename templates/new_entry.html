@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>New Entry</h1>
+    <form method='post'>
+    <div id="form">
+        <label>
+            Blog Title
+        <input type="text" name="title" size="20" />
+        </label>
+        <p> <span class="error">{{title_error}}</span></p>
+
+        <label>
+            Blog Body                      
+        </label>
+        <p><textarea name="body" rows="10" cols="30"></textarea></p>
+                    
+        <p> <span class="error">{{body_error}}</span></p>
+
+        <input  type="submit" value="Submit" />
+    </div>
+    </form>
+
+{% endblock %}
+
+
+
+    
+        
+
+
+
+
+
