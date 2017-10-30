@@ -5,19 +5,19 @@
     <header> 
         <h4>Blog Post</h4>
     </header>
-    {% if blogs|length == 0 %}
+    {% if post|length == 0 %}
         <p>No Post</p>
     {% else %}
 
         <div class="blog_post">
             {% for blog in blogs %}
-                <h3><a href="/blog?id={{blog.id}}">{{blog.title}}</a></h3>
+                <h3><a href="/blog?id={{blog.owner.id}}">{{blog.owner.username}}</a></h3>
                 <p class="blogbody">{{blog.body}}</p>
-
+                <p class="blog_owner">written by <a href="/blog?user={{blog.owner.id}}">{{blog.owner.username}}</a></p>
             {% endfor %}
             
         </div>
             
-        {% endif %}
+    {% endif %}
 
 {% endblock %}
